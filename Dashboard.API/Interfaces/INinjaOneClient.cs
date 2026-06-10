@@ -8,12 +8,13 @@ namespace Dashboard.API.Interfaces
 {
     public interface INinjaOneClient
     {
-        Task<string> GetDevicesAsync();
+        Task<List<Device>> GetDevicesAsync();
         Task<string> GetAlertsAsync();
         Task<string> GetOrganizationsAsync();
         Task<string> GetLocationsAsync();
         Task<string> GetUsersAsync();
         Task<string> GetActivitiesAsync();
         Task<List<OsPatchInstall>> GetOsPatchInstallsAsync();
+        Task<List<AntivirusStatus>> GetAntivirusStatusAsync();
     }
 }

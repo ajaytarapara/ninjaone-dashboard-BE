@@ -16,9 +16,12 @@ namespace Dashboard.API.Clients
             _httpClient = httpClient;
         }
 
-        public async Task<string> GetDevicesAsync()
+        public async Task<List<Device>> GetDevicesAsync()
         {
-            return await _httpClient.GetStringAsync("/v2/devices");
+            return await _httpClient.GetFromJsonAsync<List<Device>>
+            (
+                "/v2/devices"
+            ) ?? [];
         }
 
         public async Task<string> GetAlertsAsync()
@@ -53,6 +56,14 @@ namespace Dashboard.API.Clients
                     "/v2/queries/os-patch-installs");
 
             return response?.Results ?? [];
+        }
+
+        public async Task<List<AntivirusStatus>> GetAntivirusStatusAsync()
+        {
+            return await _httpClient.GetFromJsonAsync<List<AntivirusStatus>>
+            (
+                "/v2/queries/antivirus-status"
+            ) ?? [];
         }
     }
 }

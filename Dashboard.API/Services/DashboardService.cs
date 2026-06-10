@@ -20,17 +20,13 @@ namespace Dashboard.API.Services
 
         public async Task<OverviewMetricsDto> GetOverviewMetricsAsync()
         {
-            var devicesJson = await _ninjaOneClient.GetDevicesAsync();
             var alertsJson = await _ninjaOneClient.GetAlertsAsync();
             var options = new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
             };
 
-            var devices =
-                JsonSerializer.Deserialize<List<Device>>(
-                    devicesJson,
-                    options);
+            var devices = await _ninjaOneClient.GetDevicesAsync();
 
             var alerts =
                 JsonSerializer.Deserialize<List<Alert>>(
@@ -64,13 +60,10 @@ namespace Dashboard.API.Services
                 PropertyNameCaseInsensitive = true
             };
 
-            var devicesJson = await _ninjaOneClient.GetDevicesAsync();
+
             var organizationsJson = await _ninjaOneClient.GetOrganizationsAsync();
             var locationsJson = await _ninjaOneClient.GetLocationsAsync();
-
-            var devices =
-                JsonSerializer.Deserialize<List<Device>>(devicesJson, options)
-                ?? new List<Device>();
+            var devices = await _ninjaOneClient.GetDevicesAsync();
 
             var organizations =
                 JsonSerializer.Deserialize<List<Organization>>(organizationsJson, options)
@@ -173,6 +166,45 @@ namespace Dashboard.API.Services
                 CriticalPatches = patches.Count(p =>
                     p.Severity.Equals("Critical",
                     StringComparison.OrdinalIgnoreCase))
+            };
+        }
+
+        public async Task<AntivirusSummaryDto> GetAntivirusSummaryAsync()
+        {
+            var devices = await _ninjaOneClient.GetDevicesAsync();
+
+            var avStatuses = await _ninjaOneClient.GetAntivirusStatusAsync();
+
+            var deviceRecords =
+                from av in avStatuses
+                join d in devices
+                    on av.DeviceId equals d.Id
+                select new DeviceAvRecordDto
+                {
+                    DeviceName = d.SystemName,
+                    ProductName = av.ProductName,
+                    ProductState = av.ProductState,
+                    DefinitionStatus = av.DefinitionStatus,
+                    Version = av.Version
+                };
+
+            return new AntivirusSummaryDto
+            {
+                TotalManagedDevices = devices.Count,
+
+                DevicesWithAvInstalled = avStatuses.Count,
+
+                ActiveProtectionDevices = avStatuses.Count(x =>
+                    x.ProductState.Equals(
+                        "ACTIVE",
+                        StringComparison.OrdinalIgnoreCase)),
+
+                OutOfDateDefinitions = avStatuses.Count(x =>
+                    x.DefinitionStatus.Equals(
+                        "OUT_OF_DATE",
+                        StringComparison.OrdinalIgnoreCase)),
+
+                DeviceAvRecords = deviceRecords.ToList()
             };
         }
     }
