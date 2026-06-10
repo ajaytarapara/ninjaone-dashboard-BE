@@ -1,0 +1,65 @@
+{
+    "cursor": {
+      "name": "os-patch-installs",
+      "offset": 0,
+      "count": 5,
+      "expires": 1718000000
+    },
+    "results": [
+      {
+        "id": "11111111-1111-1111-1111-111111111111",
+        "name": "Security Update for Windows Server 2022",
+        "severity": "Critical",
+        "status": "Installed",
+        "type": "Security",
+        "installedAt": 1717000000,
+        "deviceId": 1,
+        "timestamp": 1717000000,
+        "kbNumber": "KB5034129"
+      },
+      {
+        "id": "22222222-2222-2222-2222-222222222222",
+        "name": "Cumulative Update for Windows 11",
+        "severity": "Important",
+        "status": "Installed",
+        "type": "Feature",
+        "installedAt": 1717001000,
+        "deviceId": 2,
+        "timestamp": 1717001000,
+        "kbNumber": "KB5034204"
+      },
+      {
+        "id": "33333333-3333-3333-3333-333333333333",
+        "name": "Microsoft Defender Platform Update",
+        "severity": "Moderate",
+        "status": "Pending",
+        "type": "Security",
+        "installedAt": 0,
+        "deviceId": 2,
+        "timestamp": 1717002000,
+        "kbNumber": "KB5007651"
+      },
+      {
+        "id": "44444444-4444-4444-4444-444444444444",
+        "name": "SQL Server Security Update",
+        "severity": "Critical",
+        "status": "Failed",
+        "type": "Security",
+        "installedAt": 0,
+        "deviceId": 3,
+        "timestamp": 1717003000,
+        "kbNumber": "KB5029377"
+      },
+      {
+        "id": "55555555-5555-5555-5555-555555555555",
+        "name": ".NET Framework Update",
+        "severity": "Low",
+        "status": "Installed",
+        "type": ".NET",
+        "installedAt": 1717004000,
+        "deviceId": 1,
+        "timestamp": 1717004000,
+        "kbNumber": "KB5032109"
+      }
+    ]
+  }

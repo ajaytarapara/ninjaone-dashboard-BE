@@ -1,0 +1,23 @@
+[
+    {
+      "name": "Acme Corp",
+      "description": "Primary Customer",
+      "userData": {},
+      "nodeApprovalMode": "AUTOMATIC",
+      "id": 100
+    },
+    {
+      "name": "Contoso Ltd",
+      "description": "Manufacturing Customer",
+      "userData": {},
+      "nodeApprovalMode": "AUTOMATIC",
+      "id": 101
+    },
+    {
+      "name": "Northwind Traders",
+      "description": "Retail Customer",
+      "userData": {},
+      "nodeApprovalMode": "MANUAL",
+      "id": 102
+    }
+  ]

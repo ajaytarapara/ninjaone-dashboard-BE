@@ -1,0 +1,42 @@
+[
+    {
+      "id": 501,
+      "uid": "248d564a-d36c-4a84-bc7f-4da063aa89ce",
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "john.smith@acme.com",
+      "phone": "+1-555-1001",
+      "enabled": true,
+      "administrator": true,
+      "permitAllClients": true,
+      "notifyAllClients": true,
+      "mustChangePw": false,
+      "mfaConfigured": true,
+      "userType": "TECHNICIAN",
+      "invitationStatus": "REGISTERED",
+      "organizationId": 100,
+      "deviceIds": [1, 2],
+      "assignedDeviceIds": [1, 2],
+      "roles": ["Administrator"]
+    },
+    {
+      "id": 502,
+      "uid": "348d564a-d36c-4a84-bc7f-4da063aa89ce",
+      "firstName": "Sarah",
+      "lastName": "Johnson",
+      "email": "sarah.johnson@contoso.com",
+      "phone": "+1-555-1002",
+      "enabled": true,
+      "administrator": false,
+      "permitAllClients": false,
+      "notifyAllClients": true,
+      "mustChangePw": false,
+      "mfaConfigured": true,
+      "userType": "TECHNICIAN",
+      "invitationStatus": "REGISTERED",
+      "organizationId": 101,
+      "deviceIds": [3],
+      "assignedDeviceIds": [3],
+      "roles": ["Technician"]
+    }
+  ]

@@ -1,0 +1,54 @@
+[
+    {
+      "id": 1,
+      "uid": "a1111111-b222-c333-d444-e55555555555",
+      "organizationId": 100,
+      "locationId": 10,
+      "nodeClass": "WINDOWS_SERVER",
+      "approvalStatus": "APPROVED",
+      "offline": false,
+      "displayName": "Server-2019-01",
+      "systemName": "Server-2019-01",
+      "dnsName": "server-2019-01.acme.local",
+      "created": 1716000000,
+      "lastContact": 1717000000,
+      "tags": ["Production"],
+      "references": {
+        "organization": {
+          "id": 100,
+          "name": "Acme Corp",
+          "description": "Primary Customer"
+        },
+        "location": {
+          "id": 10,
+          "name": "New York Office"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "uid": "a1111111-b222-c333-d444-e66666666666",
+      "organizationId": 100,
+      "locationId": 11,
+      "nodeClass": "WINDOWS_WORKSTATION",
+      "approvalStatus": "APPROVED",
+      "offline": true,
+      "displayName": "Workstation-15",
+      "systemName": "Workstation-15",
+      "dnsName": "workstation-15.acme.local",
+      "created": 1716000000,
+      "lastContact": 1716900000,
+      "tags": ["Finance"],
+      "references": {
+        "organization": {
+          "id": 100,
+          "name": "Acme Corp",
+          "description": "Primary Customer"
+        },
+        "location": {
+          "id": 11,
+          "name": "Finance Department"
+        }
+      }
+    }
+  ]

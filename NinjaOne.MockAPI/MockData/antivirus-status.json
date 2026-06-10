@@ -1,0 +1,34 @@
+{
+    "cursor": {
+      "name": "antivirus-status",
+      "offset": 0,
+      "count": 3,
+      "expires": 1718000000
+    },
+    "results": [
+      {
+        "productName": "Microsoft Defender Antivirus",
+        "productState": "ACTIVE",
+        "definitionStatus": "UP_TO_DATE",
+        "version": "4.18.24010.7",
+        "deviceId": 1,
+        "timestamp": 1717000000
+      },
+      {
+        "productName": "Microsoft Defender Antivirus",
+        "productState": "ACTIVE",
+        "definitionStatus": "OUT_OF_DATE",
+        "version": "4.18.24010.7",
+        "deviceId": 2,
+        "timestamp": 1717000500
+      },
+      {
+        "productName": "CrowdStrike Falcon",
+        "productState": "ACTIVE",
+        "definitionStatus": "UP_TO_DATE",
+        "version": "7.12.0",
+        "deviceId": 3,
+        "timestamp": 1717001000
+      }
+    ]
+  }

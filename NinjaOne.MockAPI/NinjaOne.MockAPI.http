@@ -1,0 +1,6 @@
+@NinjaOne.MockAPI_HostAddress = http://localhost:5052
+
+GET {{NinjaOne.MockAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,26 @@
+[
+    {
+      "name": "New York Office",
+      "address": "123 Madison Ave, New York, NY",
+      "description": "Headquarters",
+      "userData": {},
+      "id": 10,
+      "organizationId": 100
+    },
+    {
+      "name": "Finance Department",
+      "address": "456 Market St, Chicago, IL",
+      "description": "Finance Operations",
+      "userData": {},
+      "id": 11,
+      "organizationId": 100
+    },
+    {
+      "name": "London Office",
+      "address": "10 Canary Wharf, London",
+      "description": "EMEA Headquarters",
+      "userData": {},
+      "id": 12,
+      "organizationId": 101
+    }
+  ]

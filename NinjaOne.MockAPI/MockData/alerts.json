@@ -1,0 +1,60 @@
+
+
+[
+    {
+      "uid": "alert-001",
+      "deviceId": 1,
+      "message": "CPU usage above 90%",
+      "createTime": 1717000000,
+      "updateTime": 1717000100,
+      "sourceType": "AGENT_OFFLINE",
+      "sourceName": "Monitoring Engine",
+      "subject": "High CPU Usage",
+      "device": {
+        "id": 1,
+        "organizationId": 100,
+        "offline": false,
+        "displayName": "Server-2019-01",
+        "systemName": "Server-2019-01",
+        "references": {
+          "organization": {
+            "id": 100,
+            "name": "Acme Corp"
+          }
+        }
+      },
+      "priority": "HIGH",
+      "severity": "CRITICAL",
+      "conditionName": "CPU Usage",
+      "conditionHealthStatus": "BAD",
+      "useGlobalHealthStatus": true
+    },
+    {
+      "uid": "alert-002",
+      "deviceId": 2,
+      "message": "Critical vulnerability detected",
+      "createTime": 1717001000,
+      "updateTime": 1717001100,
+      "sourceType": "SECURITY",
+      "sourceName": "Vulnerability Scanner",
+      "subject": "Security Vulnerability",
+      "device": {
+        "id": 2,
+        "organizationId": 101,
+        "offline": false,
+        "displayName": "SQL-Server-01",
+        "systemName": "SQL-Server-01",
+        "references": {
+          "organization": {
+            "id": 101,
+            "name": "Contoso Ltd"
+          }
+        }
+      },
+      "priority": "HIGH",
+      "severity": "CRITICAL",
+      "conditionName": "VULNERABILITY",
+      "conditionHealthStatus": "BAD",
+      "useGlobalHealthStatus": true
+    }
+  ]
