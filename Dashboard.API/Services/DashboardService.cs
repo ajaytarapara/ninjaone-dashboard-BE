@@ -110,6 +110,22 @@ namespace Dashboard.API.Services
                     (healthyPercentage * 0.3m));
 
             securityScore = Math.Min(securityScore, 100);
+            var topAlertDevices = alerts
+    .GroupBy(a => a.DeviceId)
+    .Select(g =>
+    {
+        var device = devices?
+            .FirstOrDefault(d => d.Id == g.Key);
+
+        return new TopAlertDeviceDto
+        {
+            DeviceName = device?.SystemName ?? "Unknown",
+            AlertCount = g.Count()
+        };
+    })
+    .OrderByDescending(x => x.AlertCount)
+    .Take(5)
+    .ToList();
 
             return new OverviewMetricsDto
             {
@@ -157,7 +173,9 @@ namespace Dashboard.API.Services
 
                 DeviceHealthDonut = deviceHealth,
 
-                OsPlatformDistribution = osDistribution
+                OsPlatformDistribution = osDistribution,
+
+                TopAlertDevices = topAlertDevices
             };
         }
 
@@ -335,6 +353,29 @@ namespace Dashboard.API.Services
                     })
                     .ToList();
 
+            var devices = await _ninjaOneClient.GetDevicesAsync();
+
+            var recentAlerts = alerts
+                .OrderByDescending(a => a.CreateTime)
+                .Take(10)
+                .Select(a => new RecentAlertDto
+                {
+                    Id = a.Uid ?? string.Empty,
+
+                    DeviceName = devices
+                        .FirstOrDefault(d => d.Id == a.DeviceId)?
+                        .SystemName ?? "Unknown",
+
+                    Severity = a.Severity ?? string.Empty,
+
+                    Message = a.Subject ?? string.Empty,
+
+                    CreatedAt = DateTimeOffset
+                        .FromUnixTimeSeconds(a.CreateTime)
+                        .UtcDateTime
+                })
+                .ToList();
+
             return new AlertsSummaryDto
             {
                 TotalAlerts = new KpiMetricDto
@@ -367,7 +408,9 @@ namespace Dashboard.API.Services
                     TrendPercentage = -0.9m
                 },
 
-                SeverityDistribution = severityDistribution
+                SeverityDistribution = severityDistribution,
+
+                RecentAlerts = recentAlerts
             };
         }
         public async Task<PatchSummaryDto> GetPatchSummaryAsync()
@@ -444,8 +487,58 @@ namespace Dashboard.API.Services
                 })
                 .ToList();
 
+            var complianceTrend = new List<ComplianceTrendDto>
+{
+    new()
+    {
+        Period = "Week 1",
+        CompliancePercentage = 82
+    },
+
+    new()
+    {
+        Period = "Week 2",
+        CompliancePercentage = 85
+    },
+
+    new()
+    {
+        Period = "Week 3",
+        CompliancePercentage = 88
+    },
+
+    new()
+    {
+        Period = "Week 4",
+        CompliancePercentage = complianceScore
+    }
+};
+            var organizationsJson =
+                await _ninjaOneClient.GetOrganizationsAsync();
+
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+
+            var organizations =
+                JsonSerializer.Deserialize<List<Organization>>(
+                    organizationsJson,
+                    options) ?? [];
+
+            var complianceByOrganization =
+organizations
+.Select(o => new OrganizationComplianceDto
+{
+    Organization = o.Name,
+
+    CompliancePercentage = complianceScore
+})
+.ToList();
+
             return new PatchSummaryDto
             {
+                ComplianceTrend = complianceTrend,
                 TotalPatches = new KpiMetricDto
                 {
                     Value = totalPatches,
@@ -484,7 +577,10 @@ namespace Dashboard.API.Services
 
                 PatchStatusDistribution = patchStatusDistribution,
 
-                SeverityDistribution = severityGroups
+                SeverityDistribution = severityGroups,
+
+                ComplianceByOrganization = complianceByOrganization
+
             };
         }
 

@@ -17,4 +17,7 @@ public class PatchSummaryDto
     public List<PatchStatusDto> PatchStatusDistribution { get; set; } = [];
 
     public List<PatchSeverityDto> SeverityDistribution { get; set; } = [];
+    public List<ComplianceTrendDto> ComplianceTrend { get; set; } = [];
+
+    public List<OrganizationComplianceDto> ComplianceByOrganization { get; set; } = [];
 }

@@ -18,5 +18,7 @@ namespace Dashboard.API.DTOs
         public KpiMetricDto LowAlerts { get; set; } = new();
 
         public List<AlertSeverityDto> SeverityDistribution { get; set; } = [];
+
+        public List<RecentAlertDto> RecentAlerts { get; set; } = [];
     }
 }
