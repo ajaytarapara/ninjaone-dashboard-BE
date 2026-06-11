@@ -7,13 +7,27 @@ namespace Dashboard.API.DTOs
 {
     public class AntivirusSummaryDto
     {
-        public int TotalManagedDevices { get; set; }
+        // KPI Cards
 
-        public int DevicesWithAvInstalled { get; set; }
+        public KpiMetricDto ProtectedDevices { get; set; } = new();
 
-        public int ActiveProtectionDevices { get; set; }
+        public KpiMetricDto UnprotectedDevices { get; set; } = new();
 
-        public int OutOfDateDefinitions { get; set; }
+        public KpiMetricDto CoveragePercentage { get; set; } = new();
+
+        public KpiMetricDto AntivirusHealthScore { get; set; } = new();
+
+        public KpiMetricDto ActiveProtectionDevices { get; set; } = new();
+
+        public KpiMetricDto OutOfDateDefinitions { get; set; } = new();
+
+        // Charts
+
+        public List<AntivirusStatusDto> StatusDistribution { get; set; } = [];
+
+        public List<AntivirusVendorDto> VendorDistribution { get; set; } = [];
+
+        // Table Widget
 
         public List<DeviceAvRecordDto> DeviceAvRecords { get; set; } = [];
     }

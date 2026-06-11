@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Dashboard.API.DTOs
 {
-    public class AssetListDto
+    public class AssetRecordDto
     {
         public int DeviceId { get; set; }
 
@@ -18,11 +17,11 @@ namespace Dashboard.API.DTOs
 
         public string HealthStatus { get; set; } = string.Empty;
 
-        public string? Organization { get; set; }
+        public string Organization { get; set; } = string.Empty;
 
-        public string? Location { get; set; }
+        public string Location { get; set; } = string.Empty;
 
-        public long LastContact { get; set; }
+        public string LastContact { get; set; } = string.Empty;
 
         public List<string> Tags { get; set; } = [];
     }

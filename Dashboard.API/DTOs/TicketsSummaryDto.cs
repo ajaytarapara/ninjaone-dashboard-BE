@@ -2,19 +2,27 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Dashboard.API.Models;
 
 namespace Dashboard.API.DTOs
 {
     public class TicketsSummaryDto
     {
-        public int TotalOpenTickets { get; set; }
+        public KpiMetricDto TotalOpenTickets { get; set; } = new();
 
-        public int CriticalTickets { get; set; }
+        public KpiMetricDto CriticalTickets { get; set; } = new();
 
-        public int HighTickets { get; set; }
+        public KpiMetricDto HighTickets { get; set; } = new();
 
-        public int MediumTickets { get; set; }
+        public KpiMetricDto MediumTickets { get; set; } = new();
 
-        public int LowTickets { get; set; }
+        public KpiMetricDto LowTickets { get; set; } = new();
+
+        public List<TicketPriorityDto> PriorityDistribution { get; set; } = [];
+
+        public List<TicketStatusDto> StatusDistribution { get; set; } = [];
+
+        public List<TicketRecord> RecentTickets { get; set; } = [];
     }
+
 }

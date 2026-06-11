@@ -10,7 +10,7 @@ namespace Dashboard.API.Interfaces
     public interface IDashboardService
     {
         Task<OverviewMetricsDto> GetOverviewMetricsAsync();
-        Task<List<AssetListDto>> GetAssetListAsync();
+        Task<AssetListResponseDto> GetAssetListAsync(string? search, string? status, int pageNumber, int pageSize);
         Task<AlertsSummaryDto> GetAlertsSummaryAsync();
         Task<PatchSummaryDto> GetPatchSummaryAsync();
         Task<AntivirusSummaryDto> GetAntivirusSummaryAsync();

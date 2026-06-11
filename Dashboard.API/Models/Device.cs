@@ -12,5 +12,10 @@ public class Device
 
     public int LocationId { get; set; }
 
-     public string? AssignedOwnerUid { get; set; }
+    public string? AssignedOwnerUid { get; set; }
+    public string? NodeClass { get; set; }
+
+    public long LastContact { get; set; }
+
+    public List<string> Tags { get; set; } = [];
 }

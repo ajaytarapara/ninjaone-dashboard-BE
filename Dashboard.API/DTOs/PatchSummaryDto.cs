@@ -2,13 +2,19 @@ namespace Dashboard.API.DTOs;
 
 public class PatchSummaryDto
 {
-    public int TotalPatches { get; set; }
+    public KpiMetricDto TotalPatches { get; set; } = new();
 
-    public int InstalledPatches { get; set; }
+    public KpiMetricDto InstalledPatches { get; set; } = new();
 
-    public int PendingPatches { get; set; }
+    public KpiMetricDto PendingPatches { get; set; } = new();
 
-    public int FailedPatches { get; set; }
+    public KpiMetricDto FailedPatches { get; set; } = new();
 
-    public int CriticalPatches { get; set; }
+    public KpiMetricDto CriticalPatches { get; set; } = new();
+
+    public KpiMetricDto ComplianceScore { get; set; } = new();
+
+    public List<PatchStatusDto> PatchStatusDistribution { get; set; } = [];
+
+    public List<PatchSeverityDto> SeverityDistribution { get; set; } = [];
 }

@@ -7,16 +7,16 @@ namespace Dashboard.API.DTOs
 {
     public class AlertsSummaryDto
     {
-        public int TotalAlerts { get; set; }
+        public KpiMetricDto TotalAlerts { get; set; } = new();
 
-        public int CriticalAlerts { get; set; }
+        public KpiMetricDto CriticalAlerts { get; set; } = new();
 
-        public int HighAlerts { get; set; }
+        public KpiMetricDto HighAlerts { get; set; } = new();
 
-        public int MediumAlerts { get; set; }
+        public KpiMetricDto MediumAlerts { get; set; } = new();
 
-        public int LowAlerts { get; set; }
+        public KpiMetricDto LowAlerts { get; set; } = new();
 
-        public int RecentActivities { get; set; }
+        public List<AlertSeverityDto> SeverityDistribution { get; set; } = [];
     }
 }
