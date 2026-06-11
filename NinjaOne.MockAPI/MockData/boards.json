@@ -1,0 +1,10 @@
+[
+    {
+      "id": 1,
+      "uid": "07cc67f4-45d6-494b-adac-09b5cbc7e2b5",
+      "name": "All Tickets",
+      "description": "Default dashboard ticket board",
+      "ticketCount": 5,
+      "system": true
+    }
+  ]

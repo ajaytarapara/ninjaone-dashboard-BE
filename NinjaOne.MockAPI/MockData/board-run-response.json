@@ -1,0 +1,42 @@
+{
+    "data": [
+      {
+        "ticketId": 1001,
+        "title": "Server CPU Alert",
+        "priority": "Critical",
+        "status": "Open"
+      },
+      {
+        "ticketId": 1002,
+        "title": "VPN Connectivity Issue",
+        "priority": "High",
+        "status": "Open"
+      },
+      {
+        "ticketId": 1003,
+        "title": "Software Installation Request",
+        "priority": "Medium",
+        "status": "Open"
+      },
+      {
+        "ticketId": 1004,
+        "title": "Printer Configuration",
+        "priority": "Low",
+        "status": "Closed"
+      },
+      {
+        "ticketId": 1005,
+        "title": "Disk Space Warning",
+        "priority": "Critical",
+        "status": "Open"
+      }
+    ],
+    "metadata": {
+      "columns": [
+        "ticketId",
+        "title",
+        "priority",
+        "status"
+      ]
+    }
+  }

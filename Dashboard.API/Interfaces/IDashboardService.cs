@@ -14,5 +14,6 @@ namespace Dashboard.API.Interfaces
         Task<AlertsSummaryDto> GetAlertsSummaryAsync();
         Task<PatchSummaryDto> GetPatchSummaryAsync();
         Task<AntivirusSummaryDto> GetAntivirusSummaryAsync();
+        Task<TicketsSummaryDto> GetTicketsSummaryAsync();
     }
 }

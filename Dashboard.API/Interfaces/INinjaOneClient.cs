@@ -16,5 +16,7 @@ namespace Dashboard.API.Interfaces
         Task<string> GetActivitiesAsync();
         Task<List<OsPatchInstall>> GetOsPatchInstallsAsync();
         Task<List<AntivirusStatus>> GetAntivirusStatusAsync();
+        Task<List<TicketBoard>> GetBoardsAsync();
+        Task<TicketBoardRunResponse> RunBoardAsync(int boardId);
     }
 }

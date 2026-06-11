@@ -207,5 +207,52 @@ namespace Dashboard.API.Services
                 DeviceAvRecords = deviceRecords.ToList()
             };
         }
+
+        public async Task<TicketsSummaryDto>
+    GetTicketsSummaryAsync()
+        {
+            var boards =
+                await _ninjaOneClient.GetBoardsAsync();
+
+            var board =
+                boards.FirstOrDefault();
+
+            if (board is null)
+            {
+                return new TicketsSummaryDto();
+            }
+
+            var result =
+                await _ninjaOneClient.RunBoardAsync(
+                    board.Id);
+
+            var openTickets =
+                result.Data.Where(x =>
+                    x.Status.Equals(
+                        "Open",
+                        StringComparison.OrdinalIgnoreCase));
+
+            return new TicketsSummaryDto
+            {
+                TotalOpenTickets =
+                    openTickets.Count(),
+
+                CriticalTickets =
+                    openTickets.Count(x =>
+                        x.Priority == "Critical"),
+
+                HighTickets =
+                    openTickets.Count(x =>
+                        x.Priority == "High"),
+
+                MediumTickets =
+                    openTickets.Count(x =>
+                        x.Priority == "Medium"),
+
+                LowTickets =
+                    openTickets.Count(x =>
+                        x.Priority == "Low")
+            };
+        }
     }
 }

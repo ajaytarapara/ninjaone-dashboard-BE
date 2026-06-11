@@ -68,5 +68,27 @@ namespace Dashboard.API.Clients
 
             return response?.Results ?? [];
         }
+
+        public async Task<List<TicketBoard>> GetBoardsAsync()
+        {
+            return await _httpClient.GetFromJsonAsync<List<TicketBoard>>
+            (
+                "/v2/ticketing/trigger/boards"
+            ) ?? [];
+        }
+
+        public async Task<TicketBoardRunResponse> RunBoardAsync(int boardId)
+        {
+            var response =
+                await _httpClient.PostAsJsonAsync(
+                    $"/v2/ticketing/trigger/board/{boardId}/run",
+                    new { });
+
+            response.EnsureSuccessStatusCode();
+
+            return await response.Content
+                .ReadFromJsonAsync<TicketBoardRunResponse>()
+                    ?? new TicketBoardRunResponse();
+        }
     }
 }
