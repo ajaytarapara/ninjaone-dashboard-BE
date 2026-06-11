@@ -49,8 +49,10 @@ namespace Dashboard.API.Services
 
             // Device Health Donut
             var healthyCount = onlineDevices;
-            var warningCount = Math.Max(0, offlineDevices - criticalAlerts);
-            var criticalCount = criticalAlerts;
+
+            var criticalCount = offlineDevices;
+
+            var warningCount = 0;
 
             var deviceHealth = new List<DeviceHealthDto>();
 
@@ -86,7 +88,7 @@ namespace Dashboard.API.Services
 
             // OS Distribution
             var osDistribution = devices?
-                .GroupBy(d => d.SystemName)
+               .GroupBy(d => d.NodeClass)
                 .Select(g => new OsDistributionDto
                 {
                     Platform = g.Key,

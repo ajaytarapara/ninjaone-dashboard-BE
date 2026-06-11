@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Dashboard.API.Models;
 
 namespace Dashboard.API.DTOs
 {
@@ -24,5 +25,7 @@ namespace Dashboard.API.DTOs
         public List<DeviceHealthDto> DeviceHealthDonut { get; set; } = [];
 
         public List<OsDistributionDto> OsPlatformDistribution { get; set; } = [];
+
+        public List<TopAlertDeviceDto> TopAlertDevices { get; set; } = [];
     }
 }
