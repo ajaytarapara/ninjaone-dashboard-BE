@@ -60,10 +60,13 @@ namespace Dashboard.API.Clients
 
         public async Task<List<AntivirusStatus>> GetAntivirusStatusAsync()
         {
-            return await _httpClient.GetFromJsonAsync<List<AntivirusStatus>>
-            (
-                "/v2/queries/antivirus-status"
-            ) ?? [];
+            var response =
+                await _httpClient.GetFromJsonAsync<AntivirusStatusResponse>
+                (
+                    "/v2/queries/antivirus-status"
+                );
+
+            return response?.Results ?? [];
         }
     }
 }

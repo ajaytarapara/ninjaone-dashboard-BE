@@ -50,5 +50,14 @@ namespace Dashboard.API.Controllers
 
             return Ok(result);
         }
+        
+        [HttpGet("antivirus-summary")]
+        public async Task<ActionResult<AntivirusSummaryDto>> GetAntivirusSummary()
+        {
+            var result =
+                await _dashboardService.GetAntivirusSummaryAsync();
+
+            return Ok(result);
+        }
     }
 }

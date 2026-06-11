@@ -15,7 +15,7 @@ namespace Dashboard.API.Models
 
         public string Version { get; set; } = string.Empty;
 
-        public long DeviceId { get; set; }
+        public int DeviceId { get; set; }
 
         public long Timestamp { get; set; }
     }
