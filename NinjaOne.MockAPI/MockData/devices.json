@@ -1,54 +1,372 @@
 [
-    {
-      "id": 1,
-      "uid": "a1111111-b222-c333-d444-e55555555555",
-      "organizationId": 100,
-      "locationId": 10,
-      "nodeClass": "WINDOWS_SERVER",
-      "approvalStatus": "APPROVED",
-      "offline": false,
-      "displayName": "Server-2019-01",
-      "systemName": "Server-2019-01",
-      "dnsName": "server-2019-01.acme.local",
-      "created": 1716000000,
-      "lastContact": 1717000000,
-      "tags": ["Production"],
-      "references": {
-        "organization": {
-          "id": 100,
-          "name": "Acme Corp",
-          "description": "Primary Customer"
-        },
-        "location": {
-          "id": 10,
-          "name": "New York Office"
-        }
-      }
+  {
+    "id": 1,
+    "uid": "a1111111-b222-c333-d444-e55555555555",
+    "assignedOwnerUid": "owner-001",
+    "parentDeviceId": 0,
+    "organizationId": 100,
+    "locationId": 10,
+    "nodeClass": "WINDOWS_SERVER",
+    "nodeRoleId": 0,
+    "rolePolicyId": 0,
+    "policyId": 0,
+    "approvalStatus": "APPROVED",
+    "offline": false,
+    "displayName": "Server-2019-01",
+    "systemName": "Server-2019-01",
+    "dnsName": "server-2019-01.example.com",
+    "netbiosName": "SERVER2019",
+    "created": 1716975000,
+    "lastContact": 1716976800,
+    "lastUpdate": 1716976800,
+    "userData": {},
+    "tags": ["Production", "SQL"],
+    "maintenance": {
+      "status": "COMPLETED",
+      "start": 0,
+      "end": 0,
+      "reasonMessage": ""
     },
-    {
-      "id": 2,
-      "uid": "a1111111-b222-c333-d444-e66666666666",
-      "organizationId": 100,
-      "locationId": 11,
-      "nodeClass": "WINDOWS_WORKSTATION",
-      "approvalStatus": "APPROVED",
-      "offline": true,
-      "displayName": "Workstation-15",
-      "systemName": "Workstation-15",
-      "dnsName": "workstation-15.acme.local",
-      "created": 1716000000,
-      "lastContact": 1716900000,
-      "tags": ["Finance"],
-      "references": {
-        "organization": {
-          "id": 100,
-          "name": "Acme Corp",
-          "description": "Primary Customer"
-        },
-        "location": {
-          "id": 11,
-          "name": "Finance Department"
-        }
+    "references": {
+      "organization": {
+        "name": "Acme Corp",
+        "description": "",
+        "userData": {},
+        "nodeApprovalMode": "AUTOMATIC"
       }
     }
-  ]
+  },
+  {
+    "id": 2,
+    "uid": "a1111111-b222-c333-d444-e66666666666",
+    "assignedOwnerUid": "owner-002",
+    "parentDeviceId": 0,
+    "organizationId": 100,
+    "locationId": 10,
+    "nodeClass": "WINDOWS_WORKSTATION",
+    "nodeRoleId": 0,
+    "rolePolicyId": 0,
+    "policyId": 0,
+    "approvalStatus": "APPROVED",
+    "offline": false,
+    "displayName": "Workstation-15",
+    "systemName": "Workstation-15",
+    "dnsName": "workstation-15.example.com",
+    "netbiosName": "WORK15",
+    "created": 1716974000,
+    "lastContact": 1716976500,
+    "lastUpdate": 1716976500,
+    "userData": {},
+    "tags": ["Finance", "HR"],
+    "maintenance": {
+      "status": "NONE",
+      "start": 0,
+      "end": 0,
+      "reasonMessage": ""
+    },
+    "references": {
+      "organization": {
+        "name": "Acme Corp",
+        "description": "",
+        "userData": {},
+        "nodeApprovalMode": "AUTOMATIC"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "uid": "a1111111-b222-c333-d444-e77777777777",
+    "assignedOwnerUid": "owner-003",
+    "parentDeviceId": 0,
+    "organizationId": 101,
+    "locationId": 11,
+    "nodeClass": "WINDOWS_WORKSTATION",
+    "nodeRoleId": 0,
+    "rolePolicyId": 0,
+    "policyId": 0,
+    "approvalStatus": "APPROVED",
+    "offline": false,
+    "displayName": "LAPTOP-22",
+    "systemName": "LAPTOP-22",
+    "dnsName": "laptop-22.example.com",
+    "netbiosName": "LAPTOP22",
+    "created": 1716973000,
+    "lastContact": 1716976080,
+    "lastUpdate": 1716976080,
+    "userData": {},
+    "tags": ["Executive", "Mobile"],
+    "maintenance": {
+      "status": "NONE",
+      "start": 0,
+      "end": 0,
+      "reasonMessage": ""
+    },
+    "references": {
+      "organization": {
+        "name": "Beta Ltd",
+        "description": "",
+        "userData": {},
+        "nodeApprovalMode": "AUTOMATIC"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "uid": "a1111111-b222-c333-d444-e88888888888",
+    "assignedOwnerUid": "owner-004",
+    "parentDeviceId": 0,
+    "organizationId": 100,
+    "locationId": 10,
+    "nodeClass": "WINDOWS_WORKSTATION",
+    "nodeRoleId": 0,
+    "rolePolicyId": 0,
+    "policyId": 0,
+    "approvalStatus": "APPROVED",
+    "offline": true,
+    "displayName": "LAPTOP-07",
+    "systemName": "LAPTOP-07",
+    "dnsName": "laptop-07.example.com",
+    "netbiosName": "LAPTOP07",
+    "created": 1716969000,
+    "lastContact": 1716909800,
+    "lastUpdate": 1716909800,
+    "userData": {},
+    "tags": ["Sales", "StaleDefinitions"],
+    "maintenance": {
+      "status": "PENDING",
+      "start": 0,
+      "end": 0,
+      "reasonMessage": "Pending maintenance"
+    },
+    "references": {
+      "organization": {
+        "name": "Acme Corp",
+        "description": "",
+        "userData": {},
+        "nodeApprovalMode": "AUTOMATIC"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "uid": "a1111111-b222-c333-d444-e99999999999",
+    "assignedOwnerUid": "owner-005",
+    "parentDeviceId": 0,
+    "organizationId": 102,
+    "locationId": 12,
+    "nodeClass": "WINDOWS_SERVER",
+    "nodeRoleId": 0,
+    "rolePolicyId": 0,
+    "policyId": 0,
+    "approvalStatus": "APPROVED",
+    "offline": false,
+    "displayName": "Server-2016-02",
+    "systemName": "Server-2016-02",
+    "dnsName": "server-2016-02.example.com",
+    "netbiosName": "SERVER2016",
+    "created": 1716973000,
+    "lastContact": 1716974220,
+    "lastUpdate": 1716974220,
+    "userData": {},
+    "tags": ["Staging", "IIS"],
+    "maintenance": {
+      "status": "NONE",
+      "start": 0,
+      "end": 0,
+      "reasonMessage": ""
+    },
+    "references": {
+      "organization": {
+        "name": "Gamma Inc",
+        "description": "",
+        "userData": {},
+        "nodeApprovalMode": "AUTOMATIC"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "uid": "a2222222-b222-c333-d444-e11111111111",
+    "assignedOwnerUid": "owner-006",
+    "parentDeviceId": 0,
+    "organizationId": 100,
+    "locationId": 10,
+    "nodeClass": "WINDOWS_WORKSTATION",
+    "nodeRoleId": 0,
+    "rolePolicyId": 0,
+    "policyId": 0,
+    "approvalStatus": "APPROVED",
+    "offline": false,
+    "displayName": "LAPTOP-31",
+    "systemName": "LAPTOP-31",
+    "dnsName": "laptop-31.example.com",
+    "netbiosName": "LAPTOP31",
+    "created": 1716968000,
+    "lastContact": 1716970320,
+    "lastUpdate": 1716970320,
+    "userData": {},
+    "tags": ["Marketing"],
+    "maintenance": {
+      "status": "NONE",
+      "start": 0,
+      "end": 0,
+      "reasonMessage": ""
+    },
+    "references": {
+      "organization": {
+        "name": "Acme Corp",
+        "description": "",
+        "userData": {},
+        "nodeApprovalMode": "AUTOMATIC"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "uid": "a2222222-b222-c333-d444-e22222222222",
+    "assignedOwnerUid": "owner-007",
+    "parentDeviceId": 0,
+    "organizationId": 101,
+    "locationId": 11,
+    "nodeClass": "WINDOWS_WORKSTATION",
+    "nodeRoleId": 0,
+    "rolePolicyId": 0,
+    "policyId": 0,
+    "approvalStatus": "APPROVED",
+    "offline": false,
+    "displayName": "DESKTOP-44",
+    "systemName": "DESKTOP-44",
+    "dnsName": "desktop-44.example.com",
+    "netbiosName": "DESKTOP44",
+    "created": 1716967000,
+    "lastContact": 1716969240,
+    "lastUpdate": 1716969240,
+    "userData": {},
+    "tags": ["Engineering"],
+    "maintenance": {
+      "status": "NONE",
+      "start": 0,
+      "end": 0,
+      "reasonMessage": ""
+    },
+    "references": {
+      "organization": {
+        "name": "Beta Ltd",
+        "description": "",
+        "userData": {},
+        "nodeApprovalMode": "AUTOMATIC"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "uid": "a2222222-b222-c333-d444-e33333333333",
+    "assignedOwnerUid": "owner-008",
+    "parentDeviceId": 0,
+    "organizationId": 12,
+    "locationId": 12,
+    "nodeClass": "WINDOWS_WORKSTATION",
+    "nodeRoleId": 0,
+    "rolePolicyId": 0,
+    "policyId": 0,
+    "approvalStatus": "APPROVED",
+    "offline": false,
+    "displayName": "Workstation-12",
+    "systemName": "Workstation-12",
+    "dnsName": "workstation-12.example.com",
+    "netbiosName": "WORK12",
+    "created": 1716966000,
+    "lastContact": 1716919200,
+    "lastUpdate": 1716919200,
+    "userData": {},
+    "tags": ["Support"],
+    "maintenance": {
+      "status": "NONE",
+      "start": 0,
+      "end": 0,
+      "reasonMessage": ""
+    },
+    "references": {
+      "organization": {
+        "name": "Gamma Inc",
+        "description": "",
+        "userData": {},
+        "nodeApprovalMode": "AUTOMATIC"
+      }
+    }
+  },
+  {
+    "id": 9,
+    "uid": "a2222222-b222-c333-d444-e44444444444",
+    "assignedOwnerUid": "owner-009",
+    "parentDeviceId": 0,
+    "organizationId": 100,
+    "locationId": 10,
+    "nodeClass": "WINDOWS_SERVER",
+    "nodeRoleId": 0,
+    "rolePolicyId": 0,
+    "policyId": 0,
+    "approvalStatus": "APPROVED",
+    "offline": true,
+    "displayName": "Server-2012-01",
+    "systemName": "Server-2012-01",
+    "dnsName": "server-2012-01.example.com",
+    "netbiosName": "SERVER2012",
+    "created": 1716965000,
+    "lastContact": 1716811200,
+    "lastUpdate": 1716811200,
+    "userData": {},
+    "tags": ["Legacy"],
+    "maintenance": {
+      "status": "PENDING",
+      "start": 0,
+      "end": 0,
+      "reasonMessage": "Legacy system maintenance"
+    },
+    "references": {
+      "organization": {
+        "name": "Acme Corp",
+        "description": "",
+        "userData": {},
+        "nodeApprovalMode": "AUTOMATIC"
+      }
+    }
+  },
+  {
+    "id": 10,
+    "uid": "a2222222-b222-c333-d444-e55555555555",
+    "assignedOwnerUid": "owner-010",
+    "parentDeviceId": 0,
+    "organizationId": 102,
+    "locationId": 12,
+    "nodeClass": "MAC",
+    "nodeRoleId": 0,
+    "rolePolicyId": 0,
+    "policyId": 0,
+    "approvalStatus": "APPROVED",
+    "offline": false,
+    "displayName": "LAPTOP-15",
+    "systemName": "LAPTOP-15",
+    "dnsName": "laptop-15.example.com",
+    "netbiosName": "LAPTOP15",
+    "created": 1716964000,
+    "lastContact": 1716975000,
+    "lastUpdate": 1716975000,
+    "userData": {},
+    "tags": ["Design"],
+    "maintenance": {
+      "status": "NONE",
+      "start": 0,
+      "end": 0,
+      "reasonMessage": ""
+    },
+    "references": {
+      "organization": {
+        "name": "Gamma Inc",
+        "description": "",
+        "userData": {},
+        "nodeApprovalMode": "AUTOMATIC"
+      }
+    }
+  }
+]

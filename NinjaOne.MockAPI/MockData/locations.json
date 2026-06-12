@@ -1,26 +1,32 @@
 [
-    {
-      "name": "New York Office",
-      "address": "123 Madison Ave, New York, NY",
-      "description": "Headquarters",
-      "userData": {},
-      "id": 10,
-      "organizationId": 100
-    },
-    {
-      "name": "Finance Department",
-      "address": "456 Market St, Chicago, IL",
-      "description": "Finance Operations",
-      "userData": {},
-      "id": 11,
-      "organizationId": 100
-    },
-    {
-      "name": "London Office",
-      "address": "10 Canary Wharf, London",
-      "description": "EMEA Headquarters",
-      "userData": {},
-      "id": 12,
-      "organizationId": 101
-    }
-  ]
+  {
+    "id": 10,
+    "organizationId": 100,
+    "name": "New York Office",
+    "address": "123 Madison Ave, New York, NY"
+  },
+  {
+    "id": 11,
+    "organizationId": 101,
+    "name": "HQ Chicago",
+    "address": "456 W Wacker Dr, Chicago, IL"
+  },
+  {
+    "id": 12,
+    "organizationId": 102,
+    "name": "London Office",
+    "address": "10 Canary Wharf, London, UK"
+  },
+  {
+    "id": 13,
+    "organizationId": 103,
+    "name": "Umbrella HQ",
+    "address": "789 Biotech Rd, Raccoon City, Midwest"
+  },
+  {
+    "id": 14,
+    "organizationId": 104,
+    "name": "Soylent Facility",
+    "address": "555 Green Way, Los Angeles, CA"
+  }
+]

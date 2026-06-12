@@ -1,23 +1,27 @@
 [
-    {
-      "name": "Acme Corp",
-      "description": "Primary Customer",
-      "userData": {},
-      "nodeApprovalMode": "AUTOMATIC",
-      "id": 100
-    },
-    {
-      "name": "Contoso Ltd",
-      "description": "Manufacturing Customer",
-      "userData": {},
-      "nodeApprovalMode": "AUTOMATIC",
-      "id": 101
-    },
-    {
-      "name": "Northwind Traders",
-      "description": "Retail Customer",
-      "userData": {},
-      "nodeApprovalMode": "MANUAL",
-      "id": 102
-    }
-  ]
+  {
+    "id": 100,
+    "name": "Acme Corp",
+    "description": "Primary Customer"
+  },
+  {
+    "id": 101,
+    "name": "Globex Corporation",
+    "description": "Enterprise Client"
+  },
+  {
+    "id": 102,
+    "name": "Initech",
+    "description": "Software Client"
+  },
+  {
+    "id": 103,
+    "name": "Umbrella Corp",
+    "description": "Biotech Client"
+  },
+  {
+    "id": 104,
+    "name": "Soylent Corp",
+    "description": "Food Supply Client"
+  }
+]

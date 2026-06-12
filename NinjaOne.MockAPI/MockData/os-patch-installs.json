@@ -1,65 +1,175 @@
 {
-    "cursor": {
-      "name": "os-patch-installs",
-      "offset": 0,
-      "count": 5,
-      "expires": 1718000000
+  "cursor": {
+    "name": "os-patch-installs",
+    "offset": 0,
+    "count": 15,
+    "expires": 1718000000
+  },
+  "results": [
+    {
+      "id": "patch-101",
+      "name": "Security Update for Windows Server 2019 (KB5034129)",
+      "severity": "Critical",
+      "status": "Installed",
+      "type": "Security",
+      "installedAt": 1716970000,
+      "deviceId": 1,
+      "timestamp": 1716970000,
+      "kbNumber": "KB5034129"
     },
-    "results": [
-      {
-        "id": "11111111-1111-1111-1111-111111111111",
-        "name": "Security Update for Windows Server 2022",
-        "severity": "Critical",
-        "status": "Installed",
-        "type": "Security",
-        "installedAt": 1717000000,
-        "deviceId": 1,
-        "timestamp": 1717000000,
-        "kbNumber": "KB5034129"
-      },
-      {
-        "id": "22222222-2222-2222-2222-222222222222",
-        "name": "Cumulative Update for Windows 11",
-        "severity": "Important",
-        "status": "Installed",
-        "type": "Feature",
-        "installedAt": 1717001000,
-        "deviceId": 2,
-        "timestamp": 1717001000,
-        "kbNumber": "KB5034204"
-      },
-      {
-        "id": "33333333-3333-3333-3333-333333333333",
-        "name": "Microsoft Defender Platform Update",
-        "severity": "Moderate",
-        "status": "Pending",
-        "type": "Security",
-        "installedAt": 0,
-        "deviceId": 2,
-        "timestamp": 1717002000,
-        "kbNumber": "KB5007651"
-      },
-      {
-        "id": "44444444-4444-4444-4444-444444444444",
-        "name": "SQL Server Security Update",
-        "severity": "Critical",
-        "status": "Failed",
-        "type": "Security",
-        "installedAt": 0,
-        "deviceId": 3,
-        "timestamp": 1717003000,
-        "kbNumber": "KB5029377"
-      },
-      {
-        "id": "55555555-5555-5555-5555-555555555555",
-        "name": ".NET Framework Update",
-        "severity": "Low",
-        "status": "Installed",
-        "type": ".NET",
-        "installedAt": 1717004000,
-        "deviceId": 1,
-        "timestamp": 1717004000,
-        "kbNumber": "KB5032109"
-      }
-    ]
-  }
+    {
+      "id": "patch-102",
+      "name": "Cumulative Update for Windows 10 (KB5034204)",
+      "severity": "Important",
+      "status": "Installed",
+      "type": "Feature",
+      "installedAt": 1716960000,
+      "deviceId": 2,
+      "timestamp": 1716960000,
+      "kbNumber": "KB5034204"
+    },
+    {
+      "id": "patch-103",
+      "name": "Microsoft Defender Platform Update (KB5007651)",
+      "severity": "Moderate",
+      "status": "Pending",
+      "type": "Security",
+      "installedAt": 0,
+      "deviceId": 3,
+      "timestamp": 1716950000,
+      "kbNumber": "KB5007651"
+    },
+    {
+      "id": "patch-104",
+      "name": "SQL Server Security Update (KB5029377)",
+      "severity": "Critical",
+      "status": "Failed",
+      "type": "Security",
+      "installedAt": 0,
+      "deviceId": 1,
+      "timestamp": 1716940000,
+      "kbNumber": "KB5029377"
+    },
+    {
+      "id": "patch-105",
+      "name": ".NET Framework Update (KB5032109)",
+      "severity": "Low",
+      "status": "Installed",
+      "type": ".NET",
+      "installedAt": 1716930000,
+      "deviceId": 4,
+      "timestamp": 1716930000,
+      "kbNumber": "KB5032109"
+    },
+    {
+      "id": "patch-106",
+      "name": "Windows Server 2016 Patch (KB5034122)",
+      "severity": "Critical",
+      "status": "Installed",
+      "type": "Security",
+      "installedAt": 1716920000,
+      "deviceId": 5,
+      "timestamp": 1716920000,
+      "kbNumber": "KB5034122"
+    },
+    {
+      "id": "patch-107",
+      "name": "Windows 10 security update (KB5034123)",
+      "severity": "Critical",
+      "status": "Installed",
+      "type": "Security",
+      "installedAt": 1716910000,
+      "deviceId": 6,
+      "timestamp": 1716910000,
+      "kbNumber": "KB5034123"
+    },
+    {
+      "id": "patch-108",
+      "name": "Edge Browser Security Update",
+      "severity": "Moderate",
+      "status": "Installed",
+      "type": "ThirdParty",
+      "installedAt": 1716900000,
+      "deviceId": 7,
+      "timestamp": 1716900000,
+      "kbNumber": "KB999888"
+    },
+    {
+      "id": "patch-109",
+      "name": "Office 365 Client Update",
+      "severity": "Low",
+      "status": "Installed",
+      "type": "ThirdParty",
+      "installedAt": 1716890000,
+      "deviceId": 8,
+      "timestamp": 1716890000,
+      "kbNumber": "KB777888"
+    },
+    {
+      "id": "patch-110",
+      "name": "Windows Kernel Security Patch",
+      "severity": "Critical",
+      "status": "Installed",
+      "type": "Security",
+      "installedAt": 1716880000,
+      "deviceId": 9,
+      "timestamp": 1716880000,
+      "kbNumber": "KB5034111"
+    },
+    {
+      "id": "patch-111",
+      "name": "Windows Update patch",
+      "severity": "Low",
+      "status": "Pending",
+      "type": "Security",
+      "installedAt": 0,
+      "deviceId": 10,
+      "timestamp": 1716870000,
+      "kbNumber": "KB5034112"
+    },
+    {
+      "id": "patch-112",
+      "name": "Timezone DB update",
+      "severity": "Low",
+      "status": "Installed",
+      "type": "Time",
+      "installedAt": 1716860000,
+      "deviceId": 2,
+      "timestamp": 1716860000,
+      "kbNumber": "KB5034113"
+    },
+    {
+      "id": "patch-113",
+      "name": "Hyper-V Hypervisor Patch",
+      "severity": "Important",
+      "status": "Failed",
+      "type": "Security",
+      "installedAt": 0,
+      "deviceId": 1,
+      "timestamp": 1716850000,
+      "kbNumber": "KB5034114"
+    },
+    {
+      "id": "patch-114",
+      "name": "Windows Audio patch",
+      "severity": "Low",
+      "status": "Installed",
+      "type": "Driver",
+      "installedAt": 1716840000,
+      "deviceId": 3,
+      "timestamp": 1716840000,
+      "kbNumber": "KB5034115"
+    },
+    {
+      "id": "patch-115",
+      "name": "Graphics Driver Update",
+      "severity": "Moderate",
+      "status": "Installed",
+      "type": "Driver",
+      "installedAt": 1716830000,
+      "deviceId": 4,
+      "timestamp": 1716830000,
+      "kbNumber": "KB5034116"
+    }
+  ]
+}

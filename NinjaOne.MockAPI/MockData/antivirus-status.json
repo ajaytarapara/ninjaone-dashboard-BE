@@ -1,34 +1,90 @@
 {
-    "cursor": {
-      "name": "antivirus-status",
-      "offset": 0,
-      "count": 3,
-      "expires": 1718000000
+  "cursor": {
+    "name": "antivirus-status",
+    "offset": 0,
+    "count": 10,
+    "expires": 1718000000
+  },
+  "results": [
+    {
+      "productName": "Microsoft Defender",
+      "productState": "ACTIVE",
+      "definitionStatus": "UP_TO_DATE",
+      "version": "1.411.10.0",
+      "deviceId": 1,
+      "timestamp": 1716976800
     },
-    "results": [
-      {
-        "productName": "Microsoft Defender Antivirus",
-        "productState": "ACTIVE",
-        "definitionStatus": "UP_TO_DATE",
-        "version": "4.18.24010.7",
-        "deviceId": 1,
-        "timestamp": 1717000000
-      },
-      {
-        "productName": "Microsoft Defender Antivirus",
-        "productState": "ACTIVE",
-        "definitionStatus": "OUT_OF_DATE",
-        "version": "4.18.24010.7",
-        "deviceId": 2,
-        "timestamp": 1717000500
-      },
-      {
-        "productName": "CrowdStrike Falcon",
-        "productState": "ACTIVE",
-        "definitionStatus": "UP_TO_DATE",
-        "version": "7.12.0",
-        "deviceId": 2,
-        "timestamp": 1717001000
-      }
-    ]
-  }
+    {
+      "productName": "Malwarebytes",
+      "productState": "ACTIVE",
+      "definitionStatus": "UP_TO_DATE",
+      "version": "1.0.2200",
+      "deviceId": 2,
+      "timestamp": 1716976500
+    },
+    {
+      "productName": "Sophos Intercept X",
+      "productState": "SNOOZED",
+      "definitionStatus": "UNKNOWN",
+      "version": "2024.1.0.0",
+      "deviceId": 3,
+      "timestamp": 1716976080
+    },
+    {
+      "productName": "Microsoft Defender",
+      "productState": "INACTIVE",
+      "definitionStatus": "OUT_OF_DATE",
+      "version": "1.399.5.0",
+      "deviceId": 4,
+      "timestamp": 1716909800
+    },
+    {
+      "productName": "Trend Micro",
+      "productState": "ACTIVE",
+      "definitionStatus": "OUT_OF_DATE",
+      "version": "15.600.1010",
+      "deviceId": 5,
+      "timestamp": 1716974220
+    },
+    {
+      "productName": "Malwarebytes",
+      "productState": "ACTIVE",
+      "definitionStatus": "OUT_OF_DATE",
+      "version": "1.0.2100",
+      "deviceId": 6,
+      "timestamp": 1716970320
+    },
+    {
+      "productName": "Microsoft Defender",
+      "productState": "ACTIVE",
+      "definitionStatus": "OUT_OF_DATE",
+      "version": "1.401.2.0",
+      "deviceId": 7,
+      "timestamp": 1716969240
+    },
+    {
+      "productName": "Microsoft Defender",
+      "productState": "ACTIVE",
+      "definitionStatus": "UP_TO_DATE",
+      "version": "1.411.10.0",
+      "deviceId": 8,
+      "timestamp": 1716919200
+    },
+    {
+      "productName": "Microsoft Defender",
+      "productState": "ACTIVE",
+      "definitionStatus": "UP_TO_DATE",
+      "version": "1.411.10.0",
+      "deviceId": 9,
+      "timestamp": 1716811200
+    },
+    {
+      "productName": "Microsoft Defender",
+      "productState": "ACTIVE",
+      "definitionStatus": "UP_TO_DATE",
+      "version": "1.411.10.0",
+      "deviceId": 10,
+      "timestamp": 1716975000
+    }
+  ]
+}

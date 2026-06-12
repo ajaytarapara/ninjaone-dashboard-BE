@@ -1,42 +1,84 @@
 {
-    "data": [
-      {
-        "ticketId": 1001,
-        "title": "Server CPU Alert",
-        "priority": "Critical",
-        "status": "Open"
-      },
-      {
-        "ticketId": 1002,
-        "title": "VPN Connectivity Issue",
-        "priority": "High",
-        "status": "Open"
-      },
-      {
-        "ticketId": 1003,
-        "title": "Software Installation Request",
-        "priority": "Medium",
-        "status": "Open"
-      },
-      {
-        "ticketId": 1004,
-        "title": "Printer Configuration",
-        "priority": "Low",
-        "status": "Closed"
-      },
-      {
-        "ticketId": 1005,
-        "title": "Disk Space Warning",
-        "priority": "Critical",
-        "status": "Open"
-      }
-    ],
-    "metadata": {
-      "columns": [
-        "ticketId",
-        "title",
-        "priority",
-        "status"
-      ]
+  "data": [
+    {
+      "ticketId": 1001,
+      "title": "Server CPU Alert: Server-2019-01",
+      "priority": "Critical",
+      "status": "Open"
+    },
+    {
+      "ticketId": 1002,
+      "title": "VPN Connectivity Issue: Chicago HQ",
+      "priority": "High",
+      "status": "Open"
+    },
+    {
+      "ticketId": 1003,
+      "title": "Software Installation Request: Slack",
+      "priority": "Medium",
+      "status": "Open"
+    },
+    {
+      "ticketId": 1004,
+      "title": "Printer Configuration: NY 3rd Floor",
+      "priority": "Low",
+      "status": "Closed"
+    },
+    {
+      "ticketId": 1005,
+      "title": "Disk Space Warning: LAPTOP-22",
+      "priority": "High",
+      "status": "Open"
+    },
+    {
+      "ticketId": 1006,
+      "title": "Antivirus Disabled Alert: LAPTOP-07",
+      "priority": "Critical",
+      "status": "Open"
+    },
+    {
+      "ticketId": 1007,
+      "title": "Backup Failure: Server-2016-02",
+      "priority": "High",
+      "status": "Open"
+    },
+    {
+      "ticketId": 1008,
+      "title": "Bitlocker Off Warning: DESKTOP-44",
+      "priority": "Medium",
+      "status": "Open"
+    },
+    {
+      "ticketId": 1009,
+      "title": "Memory Usage Spike: Server-2012-01",
+      "priority": "Medium",
+      "status": "Open"
+    },
+    {
+      "ticketId": 1010,
+      "title": "New User Account Creation",
+      "priority": "Low",
+      "status": "Open"
+    },
+    {
+      "ticketId": 1011,
+      "title": "Office 365 License Assignment",
+      "priority": "Low",
+      "status": "Open"
+    },
+    {
+      "ticketId": 1012,
+      "title": "Wi-Fi Connectivity issues in London Office",
+      "priority": "Medium",
+      "status": "Open"
     }
+  ],
+  "metadata": {
+    "columns": [
+      "ticketId",
+      "title",
+      "priority",
+      "status"
+    ]
   }
+}

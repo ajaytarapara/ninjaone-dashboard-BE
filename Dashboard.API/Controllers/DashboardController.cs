@@ -71,14 +71,18 @@ namespace Dashboard.API.Controllers
         public async Task<ActionResult<AssetListResponseDto>> GetAssetList(
             string? search = null,
             string? status = null,
-            int pageNumber = 1,
-            int pageSize = 25)
+            int page = 1,
+            int pageSize = 25,
+            string? sortBy = "deviceName",
+            string? sortOrder = "asc")
         {
             var result = await _dashboardService.GetAssetListAsync(
                 search,
                 status,
-                pageNumber,
-                pageSize);
+                page,
+                pageSize,
+                sortBy,
+                sortOrder);
 
             return Ok(result);
         }

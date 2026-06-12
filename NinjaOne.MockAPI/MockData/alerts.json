@@ -1,60 +1,317 @@
-
-
 [
-    {
-      "uid": "alert-001",
-      "deviceId": 1,
-      "message": "CPU usage above 90%",
-      "createTime": 1717000000,
-      "updateTime": 1717000100,
-      "sourceType": "AGENT_OFFLINE",
-      "sourceName": "Monitoring Engine",
-      "subject": "High CPU Usage",
-      "device": {
-        "id": 1,
-        "organizationId": 100,
-        "offline": false,
-        "displayName": "Server-2019-01",
-        "systemName": "Server-2019-01",
-        "references": {
-          "organization": {
-            "id": 100,
-            "name": "Acme Corp"
-          }
-        }
-      },
-      "priority": "HIGH",
-      "severity": "CRITICAL",
-      "conditionName": "CPU Usage",
-      "conditionHealthStatus": "BAD",
-      "useGlobalHealthStatus": true
-    },
-    {
-      "uid": "alert-002",
-      "deviceId": 2,
-      "message": "Critical vulnerability detected",
-      "createTime": 1717001000,
-      "updateTime": 1717001100,
-      "sourceType": "SECURITY",
-      "sourceName": "Vulnerability Scanner",
-      "subject": "Security Vulnerability",
-      "device": {
-        "id": 2,
-        "organizationId": 101,
-        "offline": false,
-        "displayName": "SQL-Server-01",
-        "systemName": "SQL-Server-01",
-        "references": {
-          "organization": {
-            "id": 101,
-            "name": "Contoso Ltd"
-          }
-        }
-      },
-      "priority": "HIGH",
-      "severity": "CRITICAL",
-      "conditionName": "VULNERABILITY",
-      "conditionHealthStatus": "BAD",
-      "useGlobalHealthStatus": true
-    }
-  ]
+  {
+    "uid": "alert-901",
+    "deviceId": 1,
+    "message": "CPU usage above 90%",
+    "createTime": 1716976680,
+    "updateTime": 1716976680,
+    "subject": "High CPU Usage",
+    "severity": "CRITICAL"
+  },
+  {
+    "uid": "alert-902",
+    "deviceId": 3,
+    "message": "Disk space below 10%",
+    "createTime": 1716976380,
+    "updateTime": 1716976380,
+    "subject": "Low Disk Space",
+    "severity": "WARNING"
+  },
+  {
+    "uid": "alert-903",
+    "deviceId": 2,
+    "message": "Windows Update failed",
+    "createTime": 1716975900,
+    "updateTime": 1716975900,
+    "subject": "Patching Issue",
+    "severity": "WARNING"
+  },
+  {
+    "uid": "alert-904",
+    "deviceId": 4,
+    "message": "Antivirus disabled",
+    "createTime": 1716974880,
+    "updateTime": 1716974880,
+    "subject": "Security Protection Disabled",
+    "severity": "CRITICAL"
+  },
+  {
+    "uid": "alert-905",
+    "deviceId": 5,
+    "message": "Backup job failed",
+    "createTime": 1716974100,
+    "updateTime": 1716974100,
+    "subject": "Backup Failure",
+    "severity": "WARNING"
+  },
+  {
+    "uid": "alert-101",
+    "deviceId": 1,
+    "message": "System temperature warning",
+    "createTime": 1716970000,
+    "updateTime": 1716970000,
+    "subject": "Chassis Heat",
+    "severity": "HIGH"
+  },
+  {
+    "uid": "alert-102",
+    "deviceId": 1,
+    "message": "IIS Service down",
+    "createTime": 1716960000,
+    "updateTime": 1716960000,
+    "subject": "Web Server Down",
+    "severity": "CRITICAL"
+  },
+  {
+    "uid": "alert-103",
+    "deviceId": 1,
+    "message": "SQL Server connection pool full",
+    "createTime": 1716950000,
+    "updateTime": 1716950000,
+    "subject": "Database Pool Full",
+    "severity": "HIGH"
+  },
+  {
+    "uid": "alert-104",
+    "deviceId": 1,
+    "message": "Unauthorized login attempt",
+    "createTime": 1716940000,
+    "updateTime": 1716940000,
+    "subject": "Login Failures",
+    "severity": "CRITICAL"
+  },
+  {
+    "uid": "alert-105",
+    "deviceId": 1,
+    "message": "Disk I/O latency high",
+    "createTime": 1716930000,
+    "updateTime": 1716930000,
+    "subject": "Slow Disk I/O",
+    "severity": "MEDIUM"
+  },
+  {
+    "uid": "alert-106",
+    "deviceId": 1,
+    "message": "IP address conflict",
+    "createTime": 1716920000,
+    "updateTime": 1716920000,
+    "subject": "Network Conflict",
+    "severity": "LOW"
+  },
+  {
+    "uid": "alert-107",
+    "deviceId": 1,
+    "message": "Memory usage above 85%",
+    "createTime": 1716910000,
+    "updateTime": 1716910000,
+    "subject": "High Memory",
+    "severity": "MEDIUM"
+  },
+  {
+    "uid": "alert-108",
+    "deviceId": 1,
+    "message": "NTP Time sync failed",
+    "createTime": 1716900000,
+    "updateTime": 1716900000,
+    "subject": "Time Sync Out",
+    "severity": "LOW"
+  },
+  {
+    "uid": "alert-109",
+    "deviceId": 1,
+    "message": "SSL Certificate expiring in 10 days",
+    "createTime": 1716890000,
+    "updateTime": 1716890000,
+    "subject": "SSL Expiry Warning",
+    "severity": "MEDIUM"
+  },
+  {
+    "uid": "alert-110",
+    "deviceId": 1,
+    "message": "Pagefile usage high",
+    "createTime": 1716880000,
+    "updateTime": 1716880000,
+    "subject": "Pagefile Alert",
+    "severity": "LOW"
+  },
+  {
+    "uid": "alert-111",
+    "deviceId": 1,
+    "message": "Windows Service crashed: Spooler",
+    "createTime": 1716870000,
+    "updateTime": 1716870000,
+    "subject": "Service Crash",
+    "severity": "MEDIUM"
+  },
+  {
+    "uid": "alert-201",
+    "deviceId": 2,
+    "message": "RAM usage high",
+    "createTime": 1716965000,
+    "updateTime": 1716965000,
+    "subject": "High Memory",
+    "severity": "HIGH"
+  },
+  {
+    "uid": "alert-202",
+    "deviceId": 2,
+    "message": "Bitlocker disabled on system drive",
+    "createTime": 1716955000,
+    "updateTime": 1716955000,
+    "subject": "Encryption Disabled",
+    "severity": "HIGH"
+  },
+  {
+    "uid": "alert-203",
+    "deviceId": 2,
+    "message": "Windows Firewall profile disabled",
+    "createTime": 1716945000,
+    "updateTime": 1716945000,
+    "subject": "Firewall Turned Off",
+    "severity": "HIGH"
+  },
+  {
+    "uid": "alert-204",
+    "deviceId": 2,
+    "message": "Local Administrator password expired",
+    "createTime": 1716935000,
+    "updateTime": 1716935000,
+    "subject": "Password Expired",
+    "severity": "MEDIUM"
+  },
+  {
+    "uid": "alert-205",
+    "deviceId": 2,
+    "message": "Chrome Browser out of date",
+    "createTime": 1716925000,
+    "updateTime": 1716925000,
+    "subject": "Software Update Required",
+    "severity": "LOW"
+  },
+  {
+    "uid": "alert-206",
+    "deviceId": 2,
+    "message": "Adobe Reader critical CVE exploit vulnerability",
+    "createTime": 1716915000,
+    "updateTime": 1716915000,
+    "subject": "CVE Vulnerability Detected",
+    "severity": "CRITICAL"
+  },
+  {
+    "uid": "alert-207",
+    "deviceId": 2,
+    "message": "System registry integrity alert",
+    "createTime": 1716905000,
+    "updateTime": 1716905000,
+    "subject": "Registry Warning",
+    "severity": "HIGH"
+  },
+  {
+    "uid": "alert-301",
+    "deviceId": 3,
+    "message": "USB Drive block policy triggered",
+    "createTime": 1716972000,
+    "updateTime": 1716972000,
+    "subject": "Removable Media Blocked",
+    "severity": "MEDIUM"
+  },
+  {
+    "uid": "alert-302",
+    "deviceId": 3,
+    "message": "Host file modified",
+    "createTime": 1716962000,
+    "updateTime": 1716962000,
+    "subject": "System Files Mod",
+    "severity": "HIGH"
+  },
+  {
+    "uid": "alert-303",
+    "deviceId": 3,
+    "message": "Suspicious powershell activity",
+    "createTime": 1716952000,
+    "updateTime": 1716952000,
+    "subject": "Powershell Alert",
+    "severity": "HIGH"
+  },
+  {
+    "uid": "alert-304",
+    "deviceId": 3,
+    "message": "Wi-Fi encryption weak",
+    "createTime": 1716942000,
+    "updateTime": 1716942000,
+    "subject": "Weak Security Protocol",
+    "severity": "LOW"
+  },
+  {
+    "uid": "alert-305",
+    "deviceId": 3,
+    "message": "CPU throttling",
+    "createTime": 1716932000,
+    "updateTime": 1716932000,
+    "subject": "Thermal Throttling",
+    "severity": "LOW"
+  },
+  {
+    "uid": "alert-401",
+    "deviceId": 4,
+    "message": "Critical OS update missing for 60 days",
+    "createTime": 1716901000,
+    "updateTime": 1716901000,
+    "subject": "Missing Patches",
+    "severity": "CRITICAL"
+  },
+  {
+    "uid": "alert-402",
+    "deviceId": 4,
+    "message": "Ransomware heuristic suspicious file activity",
+    "createTime": 1716891000,
+    "updateTime": 1716891000,
+    "subject": "Ransomware Guard Triggered",
+    "severity": "CRITICAL"
+  },
+  {
+    "uid": "alert-403",
+    "deviceId": 4,
+    "message": "Local Admin group changed",
+    "createTime": 1716881000,
+    "updateTime": 1716881000,
+    "subject": "Privileges Modified",
+    "severity": "HIGH"
+  },
+  {
+    "uid": "alert-404",
+    "deviceId": 4,
+    "message": "Bitlocker recovery key backing up failed",
+    "createTime": 1716871000,
+    "updateTime": 1716871000,
+    "subject": "Encryption Key Sync Failed",
+    "severity": "MEDIUM"
+  },
+  {
+    "uid": "alert-501",
+    "deviceId": 5,
+    "message": "Disk sector error detected",
+    "createTime": 1716951000,
+    "updateTime": 1716951000,
+    "subject": "Hardware Sector Fault",
+    "severity": "HIGH"
+  },
+  {
+    "uid": "alert-502",
+    "deviceId": 5,
+    "message": "IIS HTTPS binding invalid certificate",
+    "createTime": 1716941000,
+    "updateTime": 1716941000,
+    "subject": "SSL Binding Issue",
+    "severity": "MEDIUM"
+  },
+  {
+    "uid": "alert-503",
+    "deviceId": 5,
+    "message": "Windows Server Backup partial status",
+    "createTime": 1716931000,
+    "updateTime": 1716931000,
+    "subject": "Backup Completed with Warnings",
+    "severity": "LOW"
+  }
+]
